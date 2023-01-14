@@ -36,3 +36,35 @@
         ]
 }
 ```
+
+•	Deletar pessoa pelo Id   -    DELETE  localhost:8080/pessoas/{id}
+
+
+•	Consultar pessoa pelo Id   -    GET  localhost:8080/pessoas/{id}
+
+
+•	Listar pessoas   -     GET  localhost:8080/pessoas
+
+
+•	Atualizar pessoa pelo Id   -     PUT  localhost:8080/pessoas/id
+
+```
+{
+    "nome": "Maria",
+    "dataDeNascimento": "1974-02-13",
+    "enderecos": [
+        {
+            "logradouro": "Rua Maria da Silva",
+            "cep": "5123200",
+            "numero": "2",
+            "cidade": "Petrolina"
+        },
+        {
+            "logradouro": "Rua Ferreira Cunha",
+            "cep": "5231230",
+            "numero": "21",
+            "cidade": "Olinda"
+            }
+        ]
+}
+```
