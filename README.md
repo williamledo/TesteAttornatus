@@ -37,16 +37,24 @@
 }
 ```
 
-•	Deletar pessoa pelo Id   -    DELETE  localhost:8080/pessoas/{id}
+•	Deletar pessoa pelo Id   -    DELETE  localhost:8080/pessoas/{id_pessoa}
 
-
-•	Consultar pessoa pelo Id   -    GET  localhost:8080/pessoas/{id}
-
+•	Consultar pessoa pelo Id   -    GET  localhost:8080/pessoas/{id_pessoa}
 
 •	Listar pessoas   -     GET  localhost:8080/pessoas
 
+•	Criar endereço para pessoa   -     PUT  localhost:8080/endereco/{id_pessoa}
 
-•	Atualizar pessoa pelo Id   -     PUT  localhost:8080/pessoas/{id}
+```
+{
+    "logradouro": "Rua Brasil",
+    "cep": "1241221",
+    "numero": "43",
+    "cidade": "São Paulo"
+}
+```
+
+•	Atualizar pessoa pelo Id   -     PUT  localhost:8080/pessoas/{id_pessoa}
 
 ```
 {
@@ -71,4 +79,7 @@
 
 
 •	Informar o endereco principal da pessoa   -     PUT  localhost:8080/pessoas/{id_pessoa}/{id_endereco}
+
+•	Listar enderecos da pessoa   -     GET  localhost:8080/enderecos/{id}
+
 
