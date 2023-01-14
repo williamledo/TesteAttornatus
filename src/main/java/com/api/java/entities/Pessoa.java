@@ -57,16 +57,20 @@ public class Pessoa implements Serializable {
 		this.enderecoPrincipal = dados.enderecos().get(0).getId();
 	}
 	
-	public void atualizarInformacoes(DadosAtualizacaoPessoa dados) {
+	public void atualizarPessoa(DadosAtualizacaoPessoa dados) {
 		
+		if (dados.nome() != null) {
 			this.nome = dados.nome();
-			
-			this.dataDeNascimento = dados.dataDeNascimento();
+		}
 		
-			this.enderecos = dados.enderecos();
-			
+		if(dados.dataDeNascimento() != null) {
+			this.dataDeNascimento = dados.dataDeNascimento();
+		}
+		
+		if (dados.enderecoPrincipal() != null ) {
 			this.enderecoPrincipal = dados.enderecoPrincipal();
-	
+		}
+		
 	}
 	
 }

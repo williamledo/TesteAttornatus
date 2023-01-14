@@ -63,11 +63,21 @@ public class PessoaController {
 	@Transactional
 	public ResponseEntity<DadosDetalhamentoPessoa> update(@RequestBody DadosAtualizacaoPessoa dados, @PathVariable Long id) {
 		
-		Pessoa Pessoa = repository.getReferenceById(id);
-		Pessoa.atualizarInformacoes(dados);
-		repository.save(Pessoa);
+		Pessoa pessoa = repository.getReferenceById(id);
+		pessoa.atualizarPessoa(dados);
 		
-		return ResponseEntity.ok().body(new DadosDetalhamentoPessoa(Pessoa));
+		List<Endereco> enderecosNovos = dados.enderecos();
+		
+		for (int i = 0; i < enderecosNovos.size(); i++) {
+			
+			pessoa.getEnderecos().get(i).atualizarEndereco(enderecosNovos.get(i));
+			
+			
+		}
+		
+		repository.save(pessoa);
+		
+		return ResponseEntity.ok().body(new DadosDetalhamentoPessoa(pessoa));
 		
 	}
 	

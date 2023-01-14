@@ -55,6 +55,12 @@ public class Endereco implements Serializable {
 		this.pessoa = pessoa;
 	}
 	
+	public void atualizarEndereco(Endereco endereco) {
+		this.logradouro = endereco.getLogradouro();
+		this.cep = endereco.getCep();
+		this.numero = endereco.getNumero();
+		this.cidade = endereco.getCidade();
+	}
 	
 	
 }
