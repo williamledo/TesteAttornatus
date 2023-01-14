@@ -46,7 +46,7 @@
 •	Listar pessoas   -     GET  localhost:8080/pessoas
 
 
-•	Atualizar pessoa pelo Id   -     PUT  localhost:8080/pessoas/id
+•	Atualizar pessoa pelo Id   -     PUT  localhost:8080/pessoas/{id}
 
 ```
 {
@@ -68,3 +68,7 @@
         ]
 }
 ```
+
+
+•	Informar o endereco principal da pessoa   -     PUT  localhost:8080/pessoas/{id_pessoa}/{id_endereco}
+
